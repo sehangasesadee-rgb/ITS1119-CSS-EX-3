@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Card Design</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: white;
+        }
+
+        .card {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            border-bottom: 2px solid red;
+            background: white;
+        }
+
+        .card-header {
+            background: red;
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+            font-size: 20px;
+            position: relative;
+        }
+
+        .card-body {
+            flex-grow: 1;
+            position: relative;
+        }
+
+        .card-body h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 100px;
+            margin: 0;
+            color: white;
+        }
+
+        .card:nth-child(2) { background: white; }
+        .card:nth-child(3) { background: white; }
+
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div class="card-header">Card 1</div>
+    <div class="card-body">
+        <h1>Hello</h1>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">Card 2</div>
+    <div class="card-body">
+        <h1>World</h1>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">Card 3</div>
+    <div class="card-body">
+        <h1>End</h1>
+    </div>
+</div>
+
+</body>
+</html>
